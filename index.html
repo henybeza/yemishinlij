@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saint Francis Asco Parish</title>
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#f8f8f8; color:#333; }
+    header { background:#800000; color:white; padding:15px; text-align:center; font-size:1.5rem; font-weight:bold; position:sticky; top:0; }
+    nav { background:#660000; display:flex; justify-content:center; flex-wrap:wrap; }
+    nav a { color:white; padding:10px 15px; text-decoration:none; }
+    nav a:hover { background:#4d0000; }
+    .slider { position:relative; overflow:hidden; height:300px; }
+    .slides { display:flex; width:300%; animation:slide 12s infinite; }
+    .slides img { width:100%; height:300px; object-fit:cover; }
+    @keyframes slide {
+      0%,20% { transform:translateX(0%); }
+      25%,45% { transform:translateX(-100%); }
+      50%,70% { transform:translateX(-200%); }
+      75%,100% { transform:translateX(0%); }
+    }
+    section { padding:20px; max-width:1200px; margin:auto; }
+    h2 { color:#800000; margin-bottom:10px; }
+    table { width:100%; border-collapse:collapse; margin-top:10px; }
+    table, th, td { border:1px solid #ccc; }
+    th, td { padding:10px; text-align:left; }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:10px; margin-top:15px; }
+    .gallery img { width:100%; height:150px; object-fit:cover; border-radius:5px; }
+    footer { background:#800000; color:white; text-align:center; padding:10px; margin-top:20px; font-size:0.9rem; }
+    @media(max-width:768px) {
+      .slider { height:200px; }
+      .slides img { height:200px; }
+    }
+  </style>
+</head>
+<body>
+  <header>Saint Francis Asco</header>
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#mass">Mass Schedule</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+  <div class="slider" id="home">
+    <div class="slides">
+      <img src="./1.jpg" alt="Welcome">
+      <img src="./4.jpg" alt="Mass Celebration">
+      <img src="./5.jpg" alt="Community Events">
+    </div>
+  </div>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Saint Francis Asco is a vibrant Catholic parish located in Addis Ababa, Ethiopia. Our mission is to serve the community through worship, education, and charitable activities inspired by the life of Saint Francis.</p>
+  </section>
+  <section id="mass">
+    <h2>Mass Schedule</h2>
+    <table>
+      <tr><th>Day</th><th>Time</th><th>Language</th></tr>
+      <tr><td>Sunday</td><td>7:00 AM, 9:00 AM, 11:00 AM</td><td>Amharic / English</td></tr>
+      <tr><td>Monday - Friday</td><td>7:00 AM</td><td>Amharic</td></tr>
+      <tr><td>Saturday</td><td>8:00 AM</td><td>Amharic</td></tr>
+    </table>
+  </section>
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="./1.jpg" alt="Gallery 1">
+      <img src="./2.jpg" alt="Gallery 2">
+      <img src="./3.jpg" alt="Gallery 3">
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Address: Asco, Addis Ababa, Ethiopia<br>Phone: +251 11 000 0000<br>Email: parish@saintfrancis-ascoparish.et</p>
+  </section>
+  <footer>
+    &copy; <span id="year"></span> Saint Francis Asco Parish. All rights reserved.
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
